@@ -2,13 +2,17 @@
   <head>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
+    <!-- css --> 
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+    <link rel="stylesheet" type="text/css" href="css/round_table.css">
+
     <script>
-      import Seating from './src/components/Seating'
 
       export default {
         name: 'app',
         components: {
-          Seating
+          
         }
       }
 </script>
@@ -30,9 +34,99 @@
     
   <div id="app">
     <h1>Vue app</h1>
-  <seating msg="Seating map"></seating>
-  </div>
+
     
-    <!-- <script src="index.js"></script> -->
+    
+    
+    </div>
+    
+     <!-- ROUND TABLES  -->
+
+<div class="big-wrapper">
+
+      <!-- table group 1  -->
+
+    <div id="chair-group-1" class="wrapper"> 
+
+        <chair name="Ola" color="#f5abd0"></chair>
+        <chair name="Nils" color="#9fa9a3"></chair>
+        <chair></chair>
+        <chair></chair>
+
+        <div class="circle-table-div">1</div>
+</div>
+
+  <!-- table group 2  -->
+
+    <div id="chair-group-2" class="wrapper">
+        <chair
+        v-for="person in persons"
+        :key="person.index"
+        v-bind:name="person.name"
+        v-bind:color="person.color"
+        ></chair>  
+
+        <div class="circle-table-div"> {{ tableNbr }} </div>
+
+    </div> 
+
+    <!-- table group 3  -->
+
+    <div id="chair-group-3" class="wrapper">
+            <chair
+            v-for="person in persons"
+            :key="person.index"
+            v-bind:name="person.name"
+            v-bind:color="person.color"
+            ></chair>  
+    
+            <div class="circle-table-div">3</div>
+    
+        </div> 
+
+</div>
+
+      <!-- RECTANGLE TABLE  -->
+
+     <div class="rect-table-group">
+
+    <div class="rect-wrapper"> 
+
+    <!-- table group 5  -->
+
+    <div id="chair-group-5" 
+            class="rect-chair-group">
+
+     
+      <chair
+        v-for="person in persons"
+        :key="person.index"
+        v-bind:name="person.name"
+        v-bind:color="person.color"
+        ></chair>  
+    </div>
+
+    <!-- table group 4  -->
+
+        <div id="chair-group-4" 
+        class="rect-chair-group">
+
+        <chair
+        v-for="person in persons"
+        :key="person.index"
+        v-bind:name="person.name"
+        v-bind:color="person.color"
+        ></chair>  
+
+                
+
+            </div>
+            <div class="rect-table-div">4</div>
+
+         
+    </div>
+</div>
+    
+    <script src="index.js"></script> 
   </body>
 </html>
