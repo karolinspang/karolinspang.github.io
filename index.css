@@ -1,0 +1,174 @@
+
+    body {
+
+        font-family: Verdana;
+        font-size: 12px;
+        margin: 60px;
+
+        color: #9fa9a3;
+       
+       }
+
+/* RECTANGLE TABLES */ 
+
+       /* represents a group of chairs in a row */
+    .rect-chair-group {
+        position: relative; 
+        /* background: yellow; */
+       } 
+
+       /* group of six tables , containing two big-wrapper */ 
+    .rect-table-group {
+        float:left; 
+        height: 126px;
+        padding: 1.5px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+       
+    /*  */ 
+    .rect-wrapper {
+        position: absolute;
+        float:left;
+        /* background: red; */
+        height: 124px;
+    
+    }
+
+/* ROUND TABLES: */
+
+       .big-wrapper {
+        position: relative; 
+        width: 367.5px;
+        height: 122.5px;
+        /* background: yellow; */
+    } 
+    
+    .wrapper {
+    float:left;
+        width: 122.5px;
+        /* margin: 5px; */
+        /* background: red;  */
+    
+    }
+
+
+    /* group of six tables , containing two big-wrapper */ 
+    .table-group{
+        float:left; 
+        /* background: blue; */
+        /* padding: 5px; */
+    }
+       
+       /* .chair-div:hover > .inner-chair{
+           background: #93b8f0;
+       }
+       
+       .chair-div:hover { 
+           background: #93b8f0;     
+          } */
+       
+       .chair-div {
+       
+          border-radius: 50%;
+          width: 40px;
+          height: 40px; 
+         border: solid 0.5px; 
+          border-color: white; 
+          background: #d6d6ce; 
+          float: left;  
+          margin: 10px; 
+        }
+       
+       
+       .inner-chair{
+         position: relative;
+         border-radius: 50%;
+         width: 80%;
+         height: 80%;
+         top: 9%;
+         left: 9%;
+         border: solid 0.5px; 
+         border-color: white; 
+       }
+       
+       .rect-table-div {
+       position: relative; 
+          background: #d6d6ce; 
+          border: solid 1px; 
+          border-color: white; 
+          
+           width: 361px; 
+           height: 60px;
+           top: 30px; 
+           left: 1px; 
+           
+       }
+
+       .rect-table-div h3{
+        color: white;
+        z-index: 2;
+        /* margin-top: 6%;
+        margin-left: 50%; */
+        text-align: center;
+        position: relative;
+
+    }
+
+       
+    .circle-table-div {
+        position: relative; 
+           background: #d6d6ce; 
+           border: solid 1px; 
+           border-color: white; 
+           
+            width: 90px; 
+            height: 90px;
+            top: 15px; 
+            left: 15px; 
+
+           text-align: center;
+           align-items: center;
+
+           border-radius: 50%;
+           
+        }
+
+        .circle-table-div h3{
+            color: white;
+            position: absolute;
+            left: 20px; 
+            top: 20px; 
+            margin: 10%;
+            /* align-self: center; */
+            /* text-align: center; */
+
+            z-index: 1;
+        }
+       
+       .chair-div .tooltiptext {
+           visibility: hidden;
+           width: 70px;
+           
+           background-color: #fff;
+           color: #9fa9a3;
+           
+           text-align: center;
+           border-radius: 6px;
+           border: solid 1px;
+           border-color: #d6d3d3;
+           padding: 3px 0;
+           position: absolute;
+           z-index: 1;
+           bottom: 10%;
+           left: 50%;
+           margin-left: -20px;
+           opacity: 0;
+           transition: opacity 0.5s;
+       }
+       
+       
+       .chair-div:hover .tooltiptext {
+           visibility: visible;
+           opacity: 1;
+       }
